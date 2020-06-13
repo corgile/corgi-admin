@@ -28,17 +28,6 @@
           placeholder="第三方网站统计的代码，如：Google Analytics、百度统计、CNZZ 等"
         />
       </a-form-item>
-      <!-- <a-form-item
-                  label="黑名单 IP："
-
-                >
-                  <a-input
-                    type="textarea"
-                    :autoSize="{ minRows: 5 }"
-                    v-model="options.blog_ip_blacklist"
-                    placeholder="多个 IP 地址换行隔开"
-                  />
-                </a-form-item> -->
       <a-form-item>
         <a-button
           type="primary"

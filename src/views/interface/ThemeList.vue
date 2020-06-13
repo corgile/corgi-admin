@@ -24,7 +24,7 @@
               <div class="theme-thumb">
                 <img
                   :alt="item.name"
-                  :src="item.screenshots || '/images/placeholder.jpg'"
+                  :src="item.screenshots || '/images/image.svg'"
                   loading="lazy"
                 >
               </div>
@@ -182,7 +182,7 @@
             key="2"
           >
             <a-form layout="vertical">
-              <a-form-item label="远程地址：">
+              <a-form-item label="远程git地址：">
                 <a-input v-model="fetchingUrl" />
               </a-form-item>
               <a-form-item>

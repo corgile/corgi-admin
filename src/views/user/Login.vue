@@ -1,13 +1,12 @@
 <template>
   <div class="container-wrapper">
-    <div class="halo-logo animated fadeInUp">
-      <span>Halo
+    <div class="corgi-logo animated fadeInUp">
+      <span>Corgi
         <small v-if="apiModifyVisible">API 设置</small>
-        <small v-if="authcodeVisible">两步验证</small>
       </span>
     </div>
     <div
-      v-show="formVisible == 'login-form'"
+      v-show="formVisible === 'login-form'"
       class="login-form animated"
     >
       <a-form
@@ -129,51 +128,6 @@
         </a-row>
       </a-form>
     </div>
-
-    <div
-      v-show="authcodeVisible"
-      class="authcode-form animated"
-    >
-      <a-form layout="vertical" @keyup.enter.native="handleLogin">
-        <a-form-item
-          class="animated fadeInUp"
-          :style="{'animation-delay': '0.1s'}"
-        >
-          <a-input
-            placeholder="两步验证码"
-            v-model="authcode"
-            :maxLength="6"
-          >
-            <a-icon
-              slot="prefix"
-              type="safety-certificate"
-              style="color: rgba(0,0,0,.25)"
-            />
-          </a-input>
-        </a-form-item>
-        <a-form-item
-          class="animated fadeInUp"
-          :style="{'animation-delay': '0.3s'}"
-        >
-          <a-button
-            :loading="landing"
-            type="primary"
-            :block="true"
-            @click="handleLogin"
-          >验证</a-button>
-        </a-form-item>
-
-        <a-row>
-          <a
-            @click="toggleShowLoginForm"
-            class="tip animated fadeInUp"
-            :style="{'animation-delay': '0.4s'}"
-          >
-            <a-icon type="rollback" />
-          </a>
-        </a-row>
-      </a-form>
-    </div>
   </div>
 </template>
 
@@ -260,11 +214,6 @@ export default {
 
       if (!this.password) {
         this.$message.warn('密码不能为空！')
-        return
-      }
-
-      if (this.needAuthCode && !this.authcode) {
-        this.$message.warn('两步验证码不能为空！')
         return
       }
 

@@ -12,23 +12,11 @@
       align="middle"
     >
       <a-col :span="24">
-        <a-skeleton
-          active
-          :loading="detailLoading"
-          :paragraph="{rows: 8}"
-        >
+        <a-skeleton active :loading="detailLoading" :paragraph="{rows: 8}">
           <div class="attach-detail-img">
             <div v-show="nonsupportPreviewVisible">此文件不支持预览</div>
-            <a
-              :href="attachment.path"
-              target="_blank"
-            >
-              <img
-                :src="attachment.path"
-                v-show="photoPreviewVisible"
-                style="width: 100%;"
-                loading="lazy"
-              >
+            <a :href="attachment.path" target="_blank">
+              <img :src="attachment.path" v-show="photoPreviewVisible" style="width: 100%;" loading="lazy">
             </a>
             <d-player
               ref="player"
@@ -43,22 +31,12 @@
       </a-col>
       <a-divider />
       <a-col :span="24">
-        <a-skeleton
-          active
-          :loading="detailLoading"
-          :paragraph="{rows: 8}"
-        >
+        <a-skeleton active :loading="detailLoading" :paragraph="{rows: 8}">
           <a-list itemLayout="horizontal">
             <a-list-item>
               <a-list-item-meta>
-                <template
-                  slot="description"
-                  v-if="editable"
-                >
-                  <a-input
-                    v-model="attachment.name"
-                    @blur="doUpdateAttachment"
-                  />
+                <template slot="description" v-if="editable">
+                  <a-input v-model="attachment.name" @blur="doUpdateAttachment"/>
                 </template>
                 <template
                   slot="description"
@@ -170,6 +148,7 @@ import photoApi from '@/api/photo'
 import 'vue-dplayer/dist/vue-dplayer.css'
 import VueDPlayer from 'vue-dplayer'
 import flvjs from 'flv.js'
+
 window.flvjs = flvjs
 
 export default {
@@ -229,8 +208,7 @@ export default {
     },
     attachment: function(newValue, oldValue) {
       if (newValue) {
-        var attachment = newValue
-        this.handleJudgeMediaType(attachment)
+        this.handleJudgeMediaType(newValue)
       }
     }
   },
@@ -303,10 +281,10 @@ export default {
       this.$emit('close', false)
     },
     handleJudgeMediaType(attachment) {
-      var mediaType = attachment.mediaType
+      const mediaType = attachment.mediaType
       // 判断文件类型
       if (mediaType) {
-        var prefix = mediaType.split('/')[0]
+        const prefix = mediaType.split('/')[0]
 
         if (prefix === 'video' || prefix === 'flv') {
           // 控制各个组件的显示

@@ -7,9 +7,9 @@
       class="copyright"
       style="color: rgba(0, 0, 0, 0.45);font-size: 14px;"
     >
-      Proudly power by
+      MADE WITH 💜 by
       <router-link :to="{ name:'About' }">
-        <a href="javascript:void(0);">Halo</a>
+        <a href="javascript:void(0);">Corgi</a>
       </router-link>
     </div>
   </div>

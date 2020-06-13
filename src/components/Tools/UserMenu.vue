@@ -51,7 +51,7 @@
         <a-menu-divider />
         <a-menu-item key="1">
           <a
-            href="javascript:;"
+            href="javascript:"
             @click="handleLogout"
           >
             <a-icon type="logout" />
@@ -82,7 +82,7 @@ export default {
 
       this.$confirm({
         title: '提示',
-        content: '确定要注销登录吗 ?',
+        content: '确定要退出登录吗 ?',
         onOk() {
           return that
             .logout({})

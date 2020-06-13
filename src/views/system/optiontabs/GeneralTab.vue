@@ -10,7 +10,7 @@
       <a-form-item label="博客地址：">
         <a-input
           v-model="options.blog_url"
-          placeholder="如：https://halo.run"
+          placeholder="如：https://alexs.fun"
         />
       </a-form-item>
       <a-form-item label="Logo：">

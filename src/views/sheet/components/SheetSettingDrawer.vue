@@ -93,7 +93,7 @@
             <div class="sheet-thumb">
               <img
                 class="img"
-                :src="selectedSheet.thumbnail || '/images/placeholder.jpg'"
+                :src="selectedSheet.thumbnail || '/images/image.svg'"
                 @click="thumbDrawerVisible = true"
               >
 
@@ -289,7 +289,7 @@ export default {
     },
     pickerDefaultValue() {
       if (this.selectedSheet.createTime) {
-        var date = new Date(this.selectedSheet.createTime)
+        const date = new Date(this.selectedSheet.createTime)
         return moment(date, 'YYYY-MM-DD HH:mm:ss')
       }
       return moment(new Date(), 'YYYY-MM-DD HH:mm:ss')

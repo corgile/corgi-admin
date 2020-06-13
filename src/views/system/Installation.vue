@@ -15,8 +15,8 @@
         <div class="card-container">
           <a-card
             :bordered="false"
-            title="Halo 安装向导"
-            style="box-shadow: 0px 10px 20px 0px rgba(236, 236, 236, 0.86);"
+            title="Corgi 安装向导"
+            style="box-shadow: 0 10px 20px 0 rgba(236, 236, 236, 0.86);"
           >
 
             <a-steps :current="stepCurrent">
@@ -34,7 +34,7 @@
               :model="installation"
               :rules="generalRules"
               layout="horizontal"
-              v-show="stepCurrent == 0"
+              v-show="stepCurrent === 0"
             >
               <a-form-model-item
                 class="animated fadeInUp"
@@ -123,7 +123,7 @@
 
             <a-form-model
               layout="horizontal"
-              v-show="stepCurrent == 1"
+              v-show="stepCurrent === 1"
               ref="blogForm"
               :model="installation"
               :rules="blogRules"
@@ -162,7 +162,7 @@
             </a-form-model>
 
             <!-- Data migration -->
-            <div v-show="stepCurrent == 2">
+            <div v-show="stepCurrent === 2">
               <a-alert
                 style="margin-bottom: 1rem"
                 message="如果有数据导入需求，请点击并选择之前导出的文件。需要注意的是，并不是所有数据都会导入，该初始化表单的数据会覆盖你导入的数据。"
@@ -172,7 +172,7 @@
                 ref="upload"
                 name="file"
                 accept="application/json"
-                label="拖拽或点击选择数据文件，请确认是否为 Halo 后台导出的文件。"
+                label="拖拽或点击选择数据文件，请确认是否为 Corgi 后台导出的文件。"
                 :multiple="false"
                 :uploadHandler="handleMigrationUpload"
                 :loadOptions="false"
@@ -188,18 +188,18 @@
               <div>
                 <a-button
                   class="previus-button"
-                  v-if="stepCurrent != 0"
+                  v-if="stepCurrent !== 0"
                   @click="stepCurrent--"
                   style="margin-right: 1rem;"
                 >上一步</a-button>
                 <a-button
                   type="primary"
-                  v-if="stepCurrent != 2"
+                  v-if="stepCurrent !== 2"
                   @click="handleNextStep"
                 >下一步</a-button>
               </div>
               <a-button
-                v-if="stepCurrent == 2"
+                v-if="stepCurrent === 2"
                 type="primary"
                 icon="upload"
                 @click="handleInstall"

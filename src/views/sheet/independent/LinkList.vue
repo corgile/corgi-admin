@@ -19,16 +19,9 @@
             </a-form-item>
             <a-form-item
               label="网站地址："
-              help="* 需要加上 http://"
+              help="* 需要加上 http(s)://"
             >
               <a-input v-model="link.url">
-                <!-- <a
-                  href="javascript:void(0);"
-                  slot="addonAfter"
-                  @click="handleParseUrl"
-                >
-                  <a-icon type="sync" />
-                </a> -->
               </a-input>
             </a-form-item>
             <a-form-item label="Logo：">

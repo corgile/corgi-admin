@@ -87,7 +87,7 @@
                     :key="index1"
                   >
                     <p
-                      v-if="item.description && item.description!=''"
+                      v-if="item.description && item.description!==''"
                       slot="help"
                       v-html="item.description"
                     ></p>
@@ -95,20 +95,20 @@
                       v-model="themeSettings[item.name]"
                       :defaultValue="item.defaultValue"
                       :placeholder="item.placeholder"
-                      v-if="item.type == 'TEXT'"
+                      v-if="item.type === 'TEXT'"
                     />
                     <a-input
                       type="textarea"
                       :autoSize="{ minRows: 5 }"
                       v-model="themeSettings[item.name]"
                       :placeholder="item.placeholder"
-                      v-else-if="item.type == 'TEXTAREA'"
+                      v-else-if="item.type === 'TEXTAREA'"
                     />
                     <a-radio-group
                       v-decorator="['radio-group']"
                       :defaultValue="item.defaultValue"
                       v-model="themeSettings[item.name]"
-                      v-else-if="item.type == 'RADIO'"
+                      v-else-if="item.type === 'RADIO'"
                     >
                       <a-radio
                         v-for="(option, index2) in item.options"
@@ -119,7 +119,7 @@
                     <a-select
                       v-model="themeSettings[item.name]"
                       :defaultValue="item.defaultValue"
-                      v-else-if="item.type == 'SELECT'"
+                      v-else-if="item.type === 'SELECT'"
                     >
                       <a-select-option
                         v-for="option in item.options"
@@ -132,13 +132,13 @@
                       model="hex"
                       v-model="themeSettings[item.name]"
                       :defaultValue="item.defaultValue"
-                      v-else-if="item.type == 'COLOR'"
+                      v-else-if="item.type === 'COLOR'"
                       style="display: inline-block;height: 24px;"
                     ></verte>
                     <a-input
                       v-model="themeSettings[item.name]"
                       :defaultValue="item.defaultValue"
-                      v-else-if="item.type == 'ATTACHMENT'"
+                      v-else-if="item.type === 'ATTACHMENT'"
                     >
                       <a
                         href="javascript:void(0);"
@@ -151,13 +151,13 @@
                     <a-input-number
                       v-model="themeSettings[item.name]"
                       :defaultValue="item.defaultValue"
-                      v-else-if="item.type == 'NUMBER'"
+                      v-else-if="item.type === 'NUMBER'"
                       style="width:100%"
                     />
                     <a-switch
                       v-model="themeSettings[item.name]"
                       :defaultChecked="item.defaultValue"
-                      v-else-if="item.type == 'SWITCH'"
+                      v-else-if="item.type === 'SWITCH'"
                     />
                     <a-input
                       v-model="themeSettings[item.name]"

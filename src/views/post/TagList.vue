@@ -92,7 +92,7 @@
           title="所有标签"
           :bodyStyle="{ padding: '16px' }"
         >
-          <a-empty v-if="tags.length==0" />
+          <a-empty v-if="tags.length===0" />
           <a-tooltip
             placement="topLeft"
             v-for="tag in tags"

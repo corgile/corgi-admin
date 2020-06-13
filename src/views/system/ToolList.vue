@@ -26,29 +26,6 @@
             >进入</a-button>
           </a-card>
         </a-col>
-        <!-- <a-col
-          :xl="6"
-          :lg="6"
-          :md="12"
-          :sm="24"
-          :xs="24"
-          :style="{ marginBottom: '12px' }"
-        >
-          <a-card
-            :bordered="false"
-            :bodyStyle="{ padding: '16px' }"
-          >
-            <div slot="title">
-              <a-icon type="html5" /> 静态部署
-            </div>
-            <p style="min-height: 50px;">生成静态页面并部署到 Github Pages 之类的托管平台</p>
-            <a-button
-              type="primary"
-              style="float:right"
-              @click="handleToStaticPagesManage"
-            >管理</a-button>
-          </a-card>
-        </a-col> -->
         <a-col
           :xl="6"
           :lg="6"
@@ -169,9 +146,6 @@ export default {
     handleToDeveloperOptions() {
       this.$router.push({ name: 'DeveloperOptions' })
     },
-    // handleToStaticPagesManage() {
-    //   this.$router.push({ name: 'StaticPagesManage' })
-    // },
     onUploadClose() {
       this.$refs.upload.handleClearFileList()
     }

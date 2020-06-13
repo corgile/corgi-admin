@@ -65,7 +65,7 @@
           </div>
           <a-divider />
           <div style="margin-top:15px">
-            <a-empty v-if="journals.length==0" />
+            <a-empty v-if="journals.length===0" />
             <a-list
               v-else
               itemLayout="vertical"
@@ -94,7 +94,7 @@
                       {{ item.commentCount }}
                     </a>
                   </span>
-                  <span v-if="item.type=='INTIMATE'">
+                  <span v-if="item.type==='INTIMATE'">
                     <a
                       href="javascript:void(0);"
                       disabled

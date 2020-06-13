@@ -117,19 +117,19 @@
                   >
                     <a-list-item-meta>
                       <a
-                        v-if="item.status=='PUBLISHED' || item.status == 'INTIMATE'"
+                        v-if="item.status==='PUBLISHED' || item.status === 'INTIMATE'"
                         slot="title"
                         :href="item.fullPath"
                         target="_blank"
                       >{{ item.title }}</a>
                       <a
-                        v-else-if="item.status=='DRAFT'"
+                        v-else-if="item.status==='DRAFT'"
                         slot="title"
                         href="javascript:void(0)"
                         @click="handlePostPreview(item.id)"
                       >{{ item.title }}</a>
                       <a
-                        v-else-if="item.status=='RECYCLE'"
+                        v-else-if="item.status==='RECYCLE'"
                         slot="title"
                         href="javascript:void(0);"
                         disabled
@@ -159,12 +159,6 @@
                     >
                       <recent-comment-tab type="sheets"></recent-comment-tab>
                     </a-tab-pane>
-                    <!-- <a-tab-pane
-                      tab="日志"
-                      key="3"
-                    >
-                      <recent-comment-tab type="journals"></recent-comment-tab>
-                    </a-tab-pane>-->
                   </a-tabs>
                 </div>
               </a-tab-pane>

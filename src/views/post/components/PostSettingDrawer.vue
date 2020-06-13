@@ -169,7 +169,7 @@
             <div class="post-thumb">
               <img
                 class="img"
-                :src="selectedPost.thumbnail || '/images/placeholder.jpg'"
+                :src="selectedPost.thumbnail || '/images/image.svg'"
                 @click="thumbDrawerVisible=true"
               >
 

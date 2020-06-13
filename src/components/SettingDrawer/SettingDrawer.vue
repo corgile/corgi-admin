@@ -54,7 +54,7 @@
         </div>
         <a-divider />
         <div :style="{ marginBottom: '24px' }">
-          <h3 class="setting-drawer-index-title">主题色</h3>
+          <h3 class="setting-drawer-index-title">后台主题色</h3>
           <div style="height: 20px">
             <a-tooltip
               class="setting-drawer-theme-color-colorBlock"
@@ -302,8 +302,8 @@ export default {
     float: left;
     cursor: pointer;
     margin-right: 8px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
     text-align: center;
     color: #fff;
     font-weight: 700;

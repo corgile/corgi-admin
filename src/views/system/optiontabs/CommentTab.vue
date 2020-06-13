@@ -47,16 +47,6 @@
       <a-form-item label="占位提示：">
         <a-input v-model="options.comment_content_placeholder" />
       </a-form-item>
-      <!-- <a-form-item
-                  label="自定义样式："
-
-                >
-                  <a-input
-                    type="textarea"
-                    :autoSize="{ minRows: 5 }"
-                    v-model="options.comment_custom_style"
-                  />
-                </a-form-item> -->
       <a-form-item>
         <a-button
           type="primary"

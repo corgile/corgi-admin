@@ -80,7 +80,7 @@
             icon="plus"
           >写文章</a-button>
         </router-link>
-        <a-dropdown v-show="queryParam.status!=null && queryParam.status!='' && !isMobile()">
+        <a-dropdown v-show="queryParam.status!=null && queryParam.status!=='' && !isMobile()">
           <a-menu slot="overlay">
             <a-menu-item
               key="1"
@@ -184,7 +184,7 @@
                   </a-menu-item>
                   <a-menu-item v-if="item.status === 'PUBLISHED' || item.status === 'DRAFT' || item.status === 'INTIMATE'">
                     <a-popconfirm
-                      :title="'你确定要将【' + item.title + '】文章移到回收站？'"
+                      :title="'你确定要将【' + item.title + '】移到回收站？'"
                       @confirm="handleEditStatusClick(item.id,'RECYCLE')"
                       okText="确定"
                       cancelText="取消"
@@ -194,7 +194,7 @@
                   </a-menu-item>
                   <a-menu-item v-else-if="item.status === 'RECYCLE'">
                     <a-popconfirm
-                      :title="'你确定要永久删除【' + item.title + '】文章？'"
+                      :title="'你确定要永久删除【' + item.title + '】？'"
                       @confirm="handleDeleteClick(item.id)"
                       okText="确定"
                       cancelText="取消"
@@ -230,13 +230,13 @@
               >
                 <a-icon
                   type="pushpin"
-                  v-if="item.topPriority!=0"
+                  v-if="item.topPriority!==0"
                   theme="twoTone"
                   twoToneColor="red"
                   style="margin-right: 3px;"
                 />
                 <a
-                  v-if="item.status=='PUBLISHED' || item.status == 'INTIMATE'"
+                  v-if="item.status==='PUBLISHED' || item.status === 'INTIMATE'"
                   :href="item.fullPath"
                   target="_blank"
                   style="text-decoration: none;"
@@ -247,7 +247,7 @@
                   >{{ item.title }}</a-tooltip>
                 </a>
                 <a
-                  v-else-if="item.status=='DRAFT'"
+                  v-else-if="item.status==='DRAFT'"
                   href="javascript:void(0)"
                   style="text-decoration: none;"
                   @click="handlePreview(item.id)"
@@ -311,13 +311,13 @@
           >
             <a-icon
               type="pushpin"
-              v-if="record.topPriority!=0"
+              v-if="record.topPriority!==0"
               theme="twoTone"
               twoToneColor="red"
               style="margin-right: 3px;"
             />
             <a
-              v-if="record.status=='PUBLISHED' || record.status == 'INTIMATE'"
+              v-if="record.status==='PUBLISHED' || record.status === 'INTIMATE'"
               :href="record.fullPath"
               target="_blank"
               style="text-decoration: none;"
@@ -328,7 +328,7 @@
               >{{ text }}</a-tooltip>
             </a>
             <a
-              v-else-if="record.status=='DRAFT'"
+              v-else-if="record.status==='DRAFT'"
               href="javascript:void(0)"
               style="text-decoration: none;"
               @click="handlePreview(record.id)"
@@ -429,7 +429,7 @@
               v-if="post.status === 'PUBLISHED' || post.status === 'DRAFT' || post.status === 'INTIMATE'"
             >编辑</a>
             <a-popconfirm
-              :title="'你确定要发布【' + post.title + '】文章？'"
+              :title="'你确定要发布【' + post.title + '】？'"
               @confirm="handleEditStatusClick(post.id,'PUBLISHED')"
               okText="确定"
               cancelText="取消"
@@ -441,7 +441,7 @@
             <a-divider type="vertical" />
 
             <a-popconfirm
-              :title="'你确定要将【' + post.title + '】文章移到回收站？'"
+              :title="'你确定要将【' + post.title + '】移到回收站？'"
               @confirm="handleEditStatusClick(post.id,'RECYCLE')"
               okText="确定"
               cancelText="取消"
@@ -451,7 +451,7 @@
             </a-popconfirm>
 
             <a-popconfirm
-              :title="'你确定要永久删除【' + post.title + '】文章？'"
+              :title="'你确定要永久删除【' + post.title + '】？'"
               @confirm="handleDeleteClick(post.id)"
               okText="确定"
               cancelText="取消"

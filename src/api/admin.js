@@ -88,7 +88,7 @@ adminApi.resetPassword = param => {
 
 adminApi.updateAdminAssets = () => {
   return service({
-    url: `${baseUrl}/halo-admin`,
+    url: `${baseUrl}/corgi-admin`,
     method: 'put',
     timeout: 600 * 1000
   })
@@ -120,7 +120,7 @@ adminApi.restartApplication = () => {
 
 adminApi.getLogFiles = lines => {
   return service({
-    url: `${baseUrl}/halo/logfile`,
+    url: `${baseUrl}/corgi/logfile`,
     params: {
       lines: lines
     },
@@ -130,7 +130,7 @@ adminApi.getLogFiles = lines => {
 
 adminApi.downloadLogFiles = lines => {
   return service({
-    url: `${baseUrl}/halo/logfile/download`,
+    url: `${baseUrl}/corgi/logfile/download`,
     params: {
       lines: lines
     },

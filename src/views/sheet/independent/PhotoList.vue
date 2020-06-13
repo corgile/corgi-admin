@@ -169,7 +169,7 @@
           >
             <div class="photo-detail-img">
               <img
-                :src="photo.url || '/images/placeholder.jpg'"
+                :src="photo.url || '/images/image.svg'"
                 @click="showThumbDrawer"
                 style="width: 100%;"
               >

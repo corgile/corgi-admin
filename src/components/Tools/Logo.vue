@@ -4,11 +4,11 @@
       href="javascript:void(0);"
       @click="onLogoClick()"
     >
-      <h1 class="logo-title">Halo</h1>
+      <h1 class="logo-title">Corgi</h1>
       <h1
         class="logo-sub-title"
         style="padding-left: 10px;"
-      >Dashboard</h1>
+      >Console</h1>
     </a>
   </div>
 </template>

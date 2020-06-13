@@ -76,7 +76,7 @@ export default {
     mode: {
       type: String,
       // sidemenu, topmenu
-      default: 'sidemenu'
+      default: 'topmenu'
     },
     menus: {
       type: Array,
@@ -85,7 +85,7 @@ export default {
     theme: {
       type: String,
       required: false,
-      default: 'dark'
+      default: 'light'
     },
     collapsed: {
       type: Boolean,

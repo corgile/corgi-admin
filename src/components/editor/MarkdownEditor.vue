@@ -45,13 +45,13 @@ export default {
   },
   methods: {
     handleAttachmentUpload(pos, $file) {
-      var formdata = new FormData()
+      const formdata = new FormData()
       formdata.append('file', $file)
       attachmentApi.upload(formdata).then(response => {
-        var responseObject = response.data
+        const responseObject = response.data
 
         if (responseObject.status === 200) {
-          var HaloEditor = this.$refs.md
+          const HaloEditor = this.$refs.md
           HaloEditor.$img2Url(pos, encodeURI(responseObject.data.path))
           this.$message.success('图片上传成功！')
         } else {

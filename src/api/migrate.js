@@ -6,7 +6,7 @@ const migrateApi = {}
 
 migrateApi.migrate = formData => {
   return service({
-    url: `${baseUrl}/halo`,
+    url: `${baseUrl}/corgi`,
     data: formData,
     method: 'post'
   })

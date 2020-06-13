@@ -28,7 +28,7 @@
       </a-col>
       <a-divider />
       <a-col :span="24">
-        <a-empty v-if="comments.length == 0" />
+        <a-empty v-if="comments.length === 0" />
         <TargetCommentTree
           v-else
           v-for="(comment, index) in comments"

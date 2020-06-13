@@ -57,21 +57,21 @@
                   slot="description"
                   target="_blank"
                   :href="comment.post.fullPath"
-                  v-if="this.type=='posts'"
+                  v-if="this.type==='posts'"
                 >{{ comment.post.title }}</a>
                 <a
                   slot="description"
                   target="_blank"
                   :href="comment.sheet.fullPath"
-                  v-else-if="this.type=='sheets'"
+                  v-else-if="this.type==='sheets'"
                 >{{ comment.sheet.title }}</a>
                 <span
                   slot="title"
-                  v-if="this.type=='posts'"
+                  v-if="this.type==='posts'"
                 >评论文章：</span>
                 <span
                   slot="title"
-                  v-else-if="this.type=='sheets'"
+                  v-else-if="this.type==='sheets'"
                 >评论页面：</span>
               </a-list-item-meta>
             </a-list-item>

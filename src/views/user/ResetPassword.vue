@@ -1,7 +1,7 @@
 <template>
   <div class="container-wrapper">
-    <div class="halo-logo animated fadeInUp">
-      <span>Halo<small>重置密码</small></span>
+    <div class="corgi-logo animated fadeInUp">
+      <span>Corgi<small>重置密码</small></span>
     </div>
     <div class="animated">
       <a-form layout="vertical">

@@ -104,7 +104,7 @@
             style="max-width: 300px;display: block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"
           >
             <a
-              v-if="item.status=='PUBLISHED'"
+              v-if="item.status==='PUBLISHED'"
               :href="item.fullPath"
               target="_blank"
               style="text-decoration: none;"
@@ -115,7 +115,7 @@
               >{{ item.title }}</a-tooltip>
             </a>
             <a
-              v-else-if="item.status=='DRAFT'"
+              v-else-if="item.status==='DRAFT'"
               href="javascript:void(0)"
               style="text-decoration: none;"
               @click="handlePreview(item.id)"
@@ -157,7 +157,7 @@
         slot-scope="text,record"
       >
         <a
-          v-if="record.status=='PUBLISHED'"
+          v-if="record.status==='PUBLISHED'"
           :href="record.fullPath"
           target="_blank"
           style="text-decoration: none;"
@@ -168,7 +168,7 @@
           >{{ text }}</a-tooltip>
         </a>
         <a
-          v-else-if="record.status=='DRAFT'"
+          v-else-if="record.status==='DRAFT'"
           href="javascript:void(0)"
           style="text-decoration: none;"
           @click="handlePreview(record.id)"

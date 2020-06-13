@@ -16,12 +16,6 @@
             @onSaveDraft="handleSaveDraft(true)"
             @onContentChange="onContentChange"
           />
-
-          <!-- <RichTextEditor
-            v-else
-            :originalContent="sheetToStage.originalContent"
-            @onContentChange="onContentChange"
-          /> -->
         </div>
       </a-col>
     </a-row>

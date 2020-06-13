@@ -1,13 +1,13 @@
 export default {
-  primaryColor: '#1890FF',
-  navTheme: 'dark',
+  primaryColor: '#7464DE',
+  navTheme: 'light',
   layout: 'topmenu',
   contentWidth: 'Fixed',
-  fixedHeader: false,
+  fixedHeader: true,
   fixSiderbar: false,
   autoHideHeader: false,
   storageOptions: {
-    namespace: 'halo__',
+    namespace: 'corgi__',
     name: 'ls',
     storage: 'local'
   }
