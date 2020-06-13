@@ -151,5 +151,13 @@
   "bugs": {
     "url": "https://gitee.com/corgile/corgi-admin/issues"
   },
-  "homepage": "https://gitee.com/corgile/corgi-admin#readme"
+  "homepage": "https://gitee.com/corgile/corgi-admin#readme",
+  "main": "babel.config.js",
+  "keywords": [
+    "Console",
+    "Dashboard",
+    "for",
+    "Corgi",
+    "Blog"
+  ]
 }
